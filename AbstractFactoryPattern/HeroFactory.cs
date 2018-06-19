@@ -2,9 +2,9 @@
 
 namespace AbstractFactoryPattern
 {
-    public class HeroFactory : VechileFactory
+    public class HeroFactory : IVechileFactory
     {
-        public Bike GetBike(string bikeType)
+        public IBike GetBike(string bikeType)
         {
             switch(bikeType)
             {
@@ -17,7 +17,7 @@ namespace AbstractFactoryPattern
             }
         }
 
-        public Car GetCar(string carType)
+        public ICar GetCar(string carType)
         {
             switch(carType)
             {

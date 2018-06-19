@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryPattern
 {
-    public class RegularCar: Car
+    public class RegularCar: ICar
     {
         public string Name()
         {

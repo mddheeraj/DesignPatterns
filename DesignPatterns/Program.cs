@@ -1,4 +1,5 @@
 ﻿using AbstractFactoryPattern;
+using BuilderPattern;
 using FactoryPattern;
 using System;
 
@@ -12,6 +13,8 @@ namespace DesignPatterns
             TestFactoryPattern();
             Console.WriteLine("Testing Abstract Factory Pattern");
             TestAbstractFactoryPattern();
+            Console.WriteLine("Testing Builder Pattern");
+            TestBuilderPattern();
             Console.ReadLine();
         }
 
@@ -48,6 +51,22 @@ namespace DesignPatterns
             client = new VehicleClient(heroFactory, "Regular");
             Console.WriteLine(client.GetBikeName());
             Console.WriteLine(client.GetCarName());
+        }
+
+        static void TestBuilderPattern()
+        {
+            IVehicleBuilder builder = new HondaVehicle();
+            VehicleCreator creator = new VehicleCreator(builder);
+            creator.CreateVehicle();
+            Vehicle vech = creator.GetVehicle();
+            Console.WriteLine(vech.Model);
+            Console.WriteLine(vech.Body);
+            Console.WriteLine(vech.Engine);
+            Console.WriteLine(vech.Transmission);
+            foreach(string acce in vech.Accessories)
+            {
+                Console.WriteLine(acce);
+            }
         }
     }
 }

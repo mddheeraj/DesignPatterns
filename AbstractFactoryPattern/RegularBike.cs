@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryPattern
 {
-    public class RegularBike : Bike
+    public class RegularBike : IBike
     {
         public string Name()
         {

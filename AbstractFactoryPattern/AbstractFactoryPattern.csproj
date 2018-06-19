@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bike.cs" />
+    <Compile Include="IBike.cs" />
     <Compile Include="VehicleClient.cs" />
     <Compile Include="HeroFactory.cs" />
-    <Compile Include="Car.cs" />
+    <Compile Include="ICar.cs" />
     <Compile Include="RegularBike.cs" />
     <Compile Include="RegularCar.cs" />
     <Compile Include="SportsBike.cs" />
     <Compile Include="SportsCar.cs" />
-    <Compile Include="VechileFactory.cs" />
+    <Compile Include="IVechileFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

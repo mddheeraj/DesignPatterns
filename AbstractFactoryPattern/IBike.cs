@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryPattern
 {
-    public interface Bike
+    public interface IBike
     {
         string Name();
     }

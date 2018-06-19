@@ -2,10 +2,10 @@
 {
     public class VehicleClient
     {
-        Bike bike;
-        Car car;
+        IBike bike;
+        ICar car;
 
-        public VehicleClient(VechileFactory factory, string type)
+        public VehicleClient(IVechileFactory factory, string type)
         {
             bike = factory.GetBike(type);
             car = factory.GetCar(type);

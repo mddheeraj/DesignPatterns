@@ -2,7 +2,7 @@
 
 namespace AbstractFactoryPattern
 {
-    public class SportsCar : Car
+    public class SportsCar : ICar
     {
         public string Name()
         {

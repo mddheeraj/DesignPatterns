@@ -27,11 +27,13 @@ namespace DesignPatterns
             Console.WriteLine("Testing Singleton Pattern (Creational Design Pattern)");
             TestSingletonPattern();
             Console.WriteLine();
-            Console.WriteLine("Testing Adapter Pattern (Creational Design Pattern)");
-            TestSingletonPattern();
+            Console.WriteLine("Testing Adapter Pattern (Structural Design Pattern)");
+            TestAdapterPattern();
             Console.WriteLine();
             Console.ReadLine();
         }
+
+        #region Creation Design Patterns Implementation
 
         static void TestFactoryPattern()
         {
@@ -116,11 +118,17 @@ namespace DesignPatterns
             Singleton.Instance.Show();
         }
 
+        #endregion
+
+        #region Structural Design Patterns Implementation
+
         static void TestAdapterPattern()
         {
             ITarget itarget = new EmployeeAdapter();
             ThirdPartyBillingSystem thirdPartyBillingSystem = new ThirdPartyBillingSystem(itarget);
             thirdPartyBillingSystem.ShowEmployeeList();
         }
+
+        #endregion
     }
 }

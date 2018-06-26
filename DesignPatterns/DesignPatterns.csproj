@@ -66,6 +66,10 @@
       <Project>{9da80812-a383-49e8-9091-73b083c9923b}</Project>
       <Name>PrototypePattern</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SingletonPattern\SingletonPattern.csproj">
+      <Project>{69fcf2dd-2a39-4fa9-be51-45c3d9f365fc}</Project>
+      <Name>SingletonPattern</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

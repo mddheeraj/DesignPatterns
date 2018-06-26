@@ -2,6 +2,7 @@
 using BuilderPattern;
 using FactoryPattern;
 using PrototypePattern;
+using SingletonPattern;
 using System;
 
 namespace DesignPatterns
@@ -18,6 +19,8 @@ namespace DesignPatterns
             TestBuilderPattern();
             Console.WriteLine("Testing Prototype Pattern");
             TestPrototypePattern();
+            Console.WriteLine("Testing Singleton Pattern");
+            TestSingletonPattern();
             Console.ReadLine();
         }
 
@@ -96,6 +99,12 @@ namespace DesignPatterns
 
             Console.WriteLine(typist.GetDetails());
             Console.WriteLine(typistCopy.GetDetails());
+        }
+
+        static void TestSingletonPattern()
+        {
+            Singleton.Instance.Show();
+            Singleton.Instance.Show();
         }
     }
 }

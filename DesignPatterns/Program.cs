@@ -1,5 +1,6 @@
 ﻿using AbstractFactoryPattern;
 using AdapterPattern;
+using BridgePattern;
 using BuilderPattern;
 using FactoryPattern;
 using PrototypePattern;
@@ -30,6 +31,8 @@ namespace DesignPatterns
             Console.WriteLine("Testing Adapter Pattern (Structural Design Pattern)");
             TestAdapterPattern();
             Console.WriteLine();
+            Console.WriteLine("Testing Bridge Pattern (Structural Design Pattern)");
+            TestBridgePattern();
             Console.ReadLine();
         }
 
@@ -127,6 +130,25 @@ namespace DesignPatterns
             ITarget itarget = new EmployeeAdapter();
             ThirdPartyBillingSystem thirdPartyBillingSystem = new ThirdPartyBillingSystem(itarget);
             thirdPartyBillingSystem.ShowEmployeeList();
+        }
+
+        static void TestBridgePattern()
+        {
+            IMessageSender emailSender = new EmailSender();
+            IMessageSender msmqSender = new MSMQSender();
+
+            Message systemMessage = new SystemMessage();
+            systemMessage.Body = "System Message";
+            systemMessage.Subject = "Message from system";
+            systemMessage.MessageSender = emailSender;
+            systemMessage.Send();
+
+            UserMessage userMessage = new UserMessage();
+            userMessage.Body = "User Message";
+            userMessage.Subject = "Message from user";
+            userMessage.UserComments = "User comments";
+            userMessage.MessageSender = msmqSender;
+            userMessage.Send();
         }
 
         #endregion

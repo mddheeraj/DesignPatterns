@@ -1,4 +1,5 @@
 ﻿using AbstractFactoryPattern;
+using AdapterPattern;
 using BuilderPattern;
 using FactoryPattern;
 using PrototypePattern;
@@ -11,16 +12,24 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Testing Factory Pattern");
+            Console.WriteLine("Testing Factory Pattern (Creational Design Pattern)");
             TestFactoryPattern();
-            Console.WriteLine("Testing Abstract Factory Pattern");
+            Console.WriteLine();
+            Console.WriteLine("Testing Abstract Factory Pattern (Creational Design Pattern)");
             TestAbstractFactoryPattern();
-            Console.WriteLine("Testing Builder Pattern");
+            Console.WriteLine();
+            Console.WriteLine("Testing Builder Pattern (Creational Design Pattern)");
             TestBuilderPattern();
-            Console.WriteLine("Testing Prototype Pattern");
+            Console.WriteLine();
+            Console.WriteLine("Testing Prototype Pattern (Creational Design Pattern)");
             TestPrototypePattern();
-            Console.WriteLine("Testing Singleton Pattern");
+            Console.WriteLine();
+            Console.WriteLine("Testing Singleton Pattern (Creational Design Pattern)");
             TestSingletonPattern();
+            Console.WriteLine();
+            Console.WriteLine("Testing Adapter Pattern (Creational Design Pattern)");
+            TestSingletonPattern();
+            Console.WriteLine();
             Console.ReadLine();
         }
 
@@ -105,6 +114,13 @@ namespace DesignPatterns
         {
             Singleton.Instance.Show();
             Singleton.Instance.Show();
+        }
+
+        static void TestAdapterPattern()
+        {
+            ITarget itarget = new EmployeeAdapter();
+            ThirdPartyBillingSystem thirdPartyBillingSystem = new ThirdPartyBillingSystem(itarget);
+            thirdPartyBillingSystem.ShowEmployeeList();
         }
     }
 }

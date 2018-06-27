@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6EEADFE1-E6A4-4931-BE7C-860E5EBC71FA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{AA1F47A5-AAAA-4A18-8287-6573E612B130}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DesignPatterns</RootNamespace>
-    <AssemblyName>DesignPatterns</AssemblyName>
+    <RootNamespace>CompositePattern</RootNamespace>
+    <AssemblyName>CompositePattern</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,45 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Contractor.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="IEmployed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AbstractFactoryPattern\AbstractFactoryPattern.csproj">
-      <Project>{C078FC5F-ABD6-4567-BEB1-2078FBEBD5CD}</Project>
-      <Name>AbstractFactoryPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AdapterPattern\AdapterPattern.csproj">
-      <Project>{30d5c694-e07d-4914-a4a0-2f6a94582ca4}</Project>
-      <Name>AdapterPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BridgePattern\BridgePattern.csproj">
-      <Project>{a7fe2716-344e-43c6-8bc9-5626c0c6aed5}</Project>
-      <Name>BridgePattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BuilderPattern\BuilderPattern.csproj">
-      <Project>{ea7b5fc1-ca61-4e58-9e75-c66ed8681634}</Project>
-      <Name>BuilderPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CompositePattern\CompositePattern.csproj">
-      <Project>{aa1f47a5-aaaa-4a18-8287-6573e612b130}</Project>
-      <Name>CompositePattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj">
-      <Project>{BBCB7AB2-C00A-4667-9479-98F809B12E4C}</Project>
-      <Name>FactoryPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PrototypePattern\PrototypePattern.csproj">
-      <Project>{9da80812-a383-49e8-9091-73b083c9923b}</Project>
-      <Name>PrototypePattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SingletonPattern\SingletonPattern.csproj">
-      <Project>{69fcf2dd-2a39-4fa9-be51-45c3d9f365fc}</Project>
-      <Name>SingletonPattern</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

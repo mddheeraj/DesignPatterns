@@ -3,6 +3,7 @@ using AdapterPattern;
 using BridgePattern;
 using BuilderPattern;
 using CompositePattern;
+using DecoratorPattern;
 using FactoryPattern;
 using PrototypePattern;
 using SingletonPattern;
@@ -37,6 +38,9 @@ namespace DesignPatterns
             Console.WriteLine();
             Console.WriteLine("Testing Composite Pattern (Structural Design Pattern)");
             TestCompositePattern();
+            Console.WriteLine();
+            Console.WriteLine("Testing Decorator Pattern (Structural Design Pattern)");
+            TestDecoratorPattern();
             Console.ReadLine();
         }
 
@@ -193,7 +197,21 @@ namespace DesignPatterns
                     Console.WriteLine(" \t EmpID={0}, Name={1}", employee.EmpID, employee.Name);
                 }
             }
-            Console.ReadKey();
+        }
+
+        static void TestDecoratorPattern()
+        {
+            // Basic vehicle
+            HondaCity car = new HondaCity();
+
+            Console.WriteLine("Honda City base price are : {0}", car.Price);
+
+            // Special offer
+            SpecialOffer offer = new SpecialOffer(car);
+            offer.DiscountPercentage = 25;
+            offer.Offer = "25 % discount";
+
+            Console.WriteLine("{1} @ Independence Day Special Offer and price are : {0} ", offer.Price, offer.Offer);
         }
 
         #endregion

@@ -70,6 +70,10 @@
       <Project>{aa1f47a5-aaaa-4a18-8287-6573e612b130}</Project>
       <Name>CompositePattern</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DecoratorPattern\DecoratorPattern.csproj">
+      <Project>{51dff926-01b3-4e56-9dad-89dacbe88edf}</Project>
+      <Name>DecoratorPattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj">
       <Project>{BBCB7AB2-C00A-4667-9479-98F809B12E4C}</Project>
       <Name>FactoryPattern</Name>
